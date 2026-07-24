@@ -1,10 +1,10 @@
 package main
 
 import (
-	_ "BeegoDemo2/routers"
-	"BeegoDemo2/utils"
 	beego "github.com/beego/beego/v2/server/web"
 	_ "github.com/go-sql-driver/mysql"
+	_ "myblog/routers"
+	"myblog/utils"
 )
 
 func main() {

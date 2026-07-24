@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"BeegoDemo2/controllers"
 	beego "github.com/beego/beego/v2/server/web"
+	"myblog/controllers"
 )
 
 func init() {
@@ -10,4 +10,5 @@ func init() {
 	beego.Router("/register", &controllers.RegistryController{})
 	beego.Router("/login", &controllers.LoginController{})
 	beego.Router("/exit", &controllers.ExitController{})
+	beego.Router("/article/add", &controllers.AddArticleController{})
 }

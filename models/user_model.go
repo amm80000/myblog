@@ -1,8 +1,8 @@
 package models
 
 import (
-	"BeegoDemo2/utils"
 	"fmt"
+	"myblog/utils"
 )
 
 type Users struct {

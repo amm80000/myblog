@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"BeegoDemo2/models"
-	"BeegoDemo2/utils"
 	"fmt"
+	"myblog/models"
+	"myblog/utils"
 )
 
 type LoginController struct {
