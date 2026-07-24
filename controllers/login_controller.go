@@ -4,11 +4,10 @@ import (
 	"BeegoDemo2/models"
 	"BeegoDemo2/utils"
 	"fmt"
-	beego "github.com/beego/beego/v2/server/web"
 )
 
 type LoginController struct {
-	beego.Controller
+	BaseController
 }
 
 func (this *LoginController) Get() {
@@ -24,6 +23,7 @@ func (this *LoginController) Post() {
 	id := models.QueryUserParam(username, utils.MD5(password))
 	fmt.Printf("id:%d\n", id)
 	if id > 0 {
+		this.SetSession("loginUser", username)
 		this.Data["json"] = map[string]interface{}{"code": 1, "message": "登录成功"}
 	} else {
 		this.Data["json"] = map[string]interface{}{"code": 0, "message": "登录失败"}

@@ -4,12 +4,11 @@ import (
 	"BeegoDemo2/models"
 	"BeegoDemo2/utils"
 	"fmt"
-	beego "github.com/beego/beego/v2/server/web"
 	"time"
 )
 
 type RegistryController struct {
-	beego.Controller
+	BaseController
 }
 
 func (c *RegistryController) Get() {
